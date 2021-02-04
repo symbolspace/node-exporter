@@ -6,7 +6,7 @@ services:
     node-exporter:
         image: prom/node-exporter
         container_name: node-exporter
-        hostname: "hostname"
+        hostname: "1hostname1"
         restart: always
         network_mode: "bridge"
         ports:
@@ -14,7 +14,7 @@ services:
     cadvisor:
         image: google/cadvisor:latest
         container_name: cadvisor
-        hostname: "hostname"
+        hostname: "1hostname1"
         restart: always
         network_mode: "bridge"
         ports:
