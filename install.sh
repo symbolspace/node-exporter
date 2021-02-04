@@ -9,6 +9,7 @@ hostname=$1
 && curl node-exporter.zip https://github.com/symbolspace/node-exporter/archive/main.zip \
 && unzip node-exporter.zip \
 && chmod +x *.sh \
+&& ./firewall.sh \
 && sed -i "s/1hostname1/${hostname}/g" docker-compose.yml \
 && ./up.sh
 
